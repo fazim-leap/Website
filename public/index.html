@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="OG.png">
+<meta property="og:image:secure_url" content="OG.png">
+<title>BiscInMilk</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    background-color: #22c5ff;
+    overflow: hidden;
+  }
+  #gif {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150vw;
+  }
+  @font-face {
+    font-family:'Bakey';
+    src: url('Bakey.woff2') format('woff2'),
+         url('Bakey.woff') format('woff'),
+         url('Bakey.eot') format('eot'),
+         url('Bakey.ttf') format('truetype');
+  }
+  .text {
+    position: absolute;
+    font-family: 'Bakey';
+    top: 17.5vw;
+    font-size: 4.5em;
+    font-weight: 0;
+    color: #ffffff;
+    text-shadow: 0px 0px 2px #afe5f8; /* Soft shadow */
+    filter: blur(0.2px); /* Blur effect */
+    z-index: 100;
+  }
+  @media (min-width: 320px) {
+    #gif {
+      width: 150vw; 
+      height: auto;
+    }
+  }
+  @media (min-width: 394px) {
+    #gif {
+      width: 170vw; 
+      height: auto;
+    }
+  } 
+  @media (min-width: 475px) {
+    #gif {
+      width: 120vw; 
+      height: auto;
+    }
+  }  
+  @media (min-width: 541px) {
+    #gif {
+      width: 110vw; 
+      height: auto;
+    }
+  }  
+  @media (min-width: 676px) {
+    #gif {
+      width: 90vw; 
+      height: auto;
+    }
+  } 
+  @media (min-width: 783px) {
+    #gif {
+      width: 80vw; 
+      height: auto;
+    }
+  } 
+  @media (min-width: 900px) {
+    #gif {
+      width: 70vw; 
+      height: auto;
+    }
+  }
+  @media (min-width: 1028px) {
+    #gif {
+      width: 65vw; 
+      height: auto;
+    }
+  }
+  @media (min-width: 1087px) {
+    #gif {
+      width: 50vw; 
+      height: auto;
+    }
+  } 
+  @media (min-width: 1259px) {
+    #gif {
+      width: 40vw;
+      height: auto; 
+    }
+  } 
+  @media (min-width: 1514px) {
+    #gif {
+      width: 35vw;
+      height: auto; 
+    }
+  } 
+  @media (min-width: 1628px) {
+    #gif {
+      width: 32vw; 
+      height: auto;
+    }
+  } 
+  .container {
+    margin-top: -100px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container a {
+    text-decoration: none;
+  }
+  .image-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .dot {
+    width: 10px; /* Adjust the size of the dot as needed */
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 10px; /* Adjust the spacing around the dot as needed */
+  }
+  .tap-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Transparent to show the image below */
+    cursor: pointer;
+    z-index: 9999; /* Ensure this is on top of all other elements */
+  }
+</style>
+</head>
+
+<body>
+  <div class="tap-area" id="tapArea"></div>
+  
+  <center class="text">
+    <p>BiscInMilk</p>
+    <div class="container">
+      <a href="https://x.com/Biscinmilk" class="image-wrapper">
+          <img src="x.png" alt="Image 1" height="35px" width="35px">
+      </a>
+      <div class="dot"></div>
+      <a href="https://t.me/+IgzMkcDzkAxkNWM9" class="image-wrapper">
+          <img src="tele.png" alt="Image 2" height="50px" width="50px">
+      </a>
+    </div>
+  </center>
+
+  <img id="gif" src="Sequence 01_1.gif"/>
+  
+  <audio loop muted id="audio">
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    document.getElementById('tapArea').addEventListener('click', function() {
+      var audio = document.getElementById('audio');
+      if (audio.muted) {
+        audio.muted = false;
+        audio.play();
+      }
+    });
+  </script>
+</body>
+</html>
+
